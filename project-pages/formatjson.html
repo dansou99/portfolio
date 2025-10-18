@@ -8,22 +8,22 @@
     <meta name="description" content="My portfolio and some tools.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/utilities.css">
+		<link rel="stylesheet" href=".././css/layout.css">
+    <link rel="stylesheet" href=".././css/typography.css">
+    <link rel="stylesheet" href=".././css/utilities.css">
 
 		<script defer src="./js/script.js"></script>
 	</head>
 	<body>
     <!-- NAVBAR -->
     <div class="navbar">
-      <a class="nav-title-link" href="./index.html">
+      <a class="nav-title-link" href=".././index.html">
         <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
         <span class="nav-title">Dansou99</span>
-         <!-- TODO - Change the email after 'mailto:' to your email address for contact -->
-        <a class="button" href="mailto:danielsousaprofessional@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
+      </a>
+      <!-- Separate contact button (avoid nested anchors) -->
+      <a class="button" href="mailto:danielsousaprofessional@gmail.com">
+        <span class="button-text">Contact Me</span>
       </a>
     </div>
 
@@ -39,9 +39,8 @@
             - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
             - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
           -->
-        <div class="main-title">Json formatter</div>
-        <div class="body-text">Simple json formmater will be here</div>
-        <image class="project-header-image" src="../assets/images/desktop.jpeg">
+        <div class="main-title">JSON Formatter</div>
+        <div class="body-text">Paste JSON into the box below to validate, beautify, minify, or copy it.</div>
       </div>
 
       <!-- PROJECT DETAILS -->
@@ -58,6 +57,22 @@
           <div class="body-text">Vitae justo eget magna fermentum. Imperdiet nulla malesuada pellentesque elit eget gravida. Aliquet nec ullamcorper sit amet. Aliquet sagittis id consectetur purus. Ac tortor dignissim convallis aenean. Enim neque volutpat ac tincidunt vitae. Lobortis feugiat vivamus at augue. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Viverra orci sagittis eu volutpat. Massa tincidunt nunc pulvinar sapien et ligula. Donec enim diam vulputate ut.</div>
         </div>
       </div>
+
+      <!-- JSON FORMATTER TOOL -->
+      <div id="json-formatter">
+        <div class="subheader-text">JSON Formatter</div>
+        <div class="project-details-content">
+          <textarea id="json-input" class="body-text" placeholder="Paste JSON here..." style="min-height:220px; width:100%; box-sizing:border-box; font-family:monospace; font-size:14px;"></textarea>
+          <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
+            <button id="format-btn" class="button" type="button"><span class="button-text">Beautify</span></button>
+            <button id="minify-btn" class="button" type="button"><span class="button-text">Minify</span></button>
+            <button id="copy-btn" class="button" type="button"><span class="button-text">Copy</span></button>
+            <button id="clear-btn" class="button" type="button"><span class="button-text">Clear</span></button>
+          </div>
+          <div id="json-error" class="body-text" style="color:var(--accent-color); margin-top:8px;"></div>
+        </div>
+      </div>
+    </div>
 
       <!-- IMAGE GALLERY -->
       <div id="project-gallery">
@@ -95,13 +110,8 @@
               <img src="../assets/images/sketchbook.jpeg" class="gallery-image">
               <span class="image-caption">Give your image a caption. People love context.</span>
             </div>
-            <div class="gallery-image-container">
-              <img src="../assets/images/camera.jpeg" class="gallery-image">
-              <span class="image-caption">Give your image a caption. People love context.</span>
-            </div>
         </div>
       </div>
-    </div>
 
     <!-- FOOTER -->
     <div id="footer">
@@ -116,7 +126,7 @@
         This should be the same across all pages.
       -->
       <a class="icon-link" href="mailto:danielsousaprofesssional@gmail.com">
-        <image src="./assets/icons/mail.svg" class="footer-icon"/>
+        <img src=".././assets/icons/mail.svg" class="footer-icon" alt="mail icon"/>
       </a>
     </div>
 
